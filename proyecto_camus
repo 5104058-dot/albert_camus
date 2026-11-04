@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Camus</title>
+    <style>
+        /* Diseño general de la página */
+        body {
+            background-color: #a81010; /* Fondo rojo */
+            color: #ffffff;            /* Letra blanca */
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 50px 20px;
+        }
+
+        /* Sección superior: Título e imagen centrados */
+        .seccion-central {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .imagen-filosofo {
+            width: 100%;
+            max-width: 350px;
+            border: 4px solid #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Contenedor principal que agrupa todos los textos */
+        .contenedor-textos {
+            max-width: 900px;
+            margin: 0 auto; /* Centra todo el bloque en la pantalla */
+        }
+
+        /* 1. Párrafo justo debajo de la foto */
+        .parrafo-debajo-foto {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            background-color: rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor Flexbox para poner un párrafo a la izquierda y otro a la derecha */
+        .contenedor-columnas {
+            display: flex;
+            gap: 20px; /* Espacio entre el párrafo izquierdo y el derecho */
+            margin-bottom: 20px;
+        }
+
+        /* Estilo general de los párrafos laterales */
+        .parrafo-lateral {
+            flex: 1; /* Hace que ambos párrafos ocupen la mitad del espacio */
+            background-color: rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        /* 2. Alineación del párrafo a la izquierda */
+        .izquierda {
+            text-align: left;
+        }
+
+        /* 3. Alineación del párrafo a la derecha */
+        .derecha {
+            text-align: right;
+        }
+
+        /* Estilos de la Galería de Fotos */
+        .seccion-galeria {
+            margin-top: 50px;
+        }
+
+        .seccion-galeria h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .tarjeta-galeria {
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 3px solid #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-galeria:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .tarjeta-galeria img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .tarjeta-galeria p {
+            margin: 0;
+            padding: 12px;
+            font-size: 0.95rem;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ajustes adaptativos para celulares */
+        @media (max-width: 768px) {
+            .contenedor-columnas {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor central (Nombre e Imagen) -->
+    <div class="seccion-central">
+        <h1>Albert Camus</h1>
+        <img class="imagen-filosofo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg/250px-Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg" alt="Fotografía de Albert Camus">
+    </div>
+
+    <!-- Contenedor de todos los párrafos y galería -->
+    <div class="contenedor-textos">
+        
+        <!-- Párrafo 1: Abajo de la foto -->
+        <div class="parrafo-debajo-foto">
+            <strong>Albert Camus</strong> (Mondovi, Argelia francesa; 7 de noviembre de 1913 - Villeblevin, Francia; 4 de enero de 1960) fue un novelista, ensayista, dramaturgo, filósofo y periodista francés.
+        </div>
+
+        <!-- División para izquierda y derecha (Fila 1) -->
+        <div class="contenedor-columnas">
+            <!-- Párrafo 2: A la izquierda -->
+            <div class="parrafo-lateral izquierda">
+                Sus ideas contribuyeron al surgimiento de la filosofía conocida como <em>absurdismo</em>, y a menudo se le asocia con el existencialismo. Escribió obras fundamentales para el siglo XX, tales como <em>El extranjero</em>, <em>La peste</em> y <em>El mito de Sísifo</em>.
+            </div>
+
+            <!-- Párrafo 3: A la derecha -->
+            <div class="parrafo-lateral derecha">
+                En 1957, a los 44 años, fue galardonado con el <strong>Premio Nobel de Literatura</strong>. Falleció trágicamente en un accidente automovilístico en 1960, pero dejó un legado intelectual invaluable que sigue vivo en la actualidad.
+            </div>
+        </div>
+
+        <!-- División para izquierda y derecha (Fila 2) -->
+        <div class="contenedor-columnas">
+            <!-- Párrafo 4: A la izquierda -->
+            <div class="parrafo-lateral izquierda">
+                Géneros principales: Novela, ensayo y teatro.<br>
+                Obras notables: <em>El hombre rebelde</em>, <em>La muerte feliz</em>, <em>La caída</em>, <em>El mito de Sísifo</em>, <em>El extranjero</em>, <em>La peste</em>, <em>Calígula</em>.
+            </div>
+
+            <!-- Párrafo 5: A la derecha -->
+            <div class="parrafo-lateral derecha">
+                Albert Camus ganó el Premio Nobel de Literatura en 1957 a los 44 años de edad, convirtiéndose en el segundo ganador más joven de este galardón en la historia.
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE GALERÍA DE FOTOS -->
+        <div class="seccion-galeria">
+            <h2>Galería de Fotos</h2>
+            <div class="galeria-grid">
+                
+                <div class="tarjeta-galeria">
+                    <img src="https://www.bing.com/th/id/OIP.EGlOD5FoS1S6OzhRVF6v_gHaJv?w=268&h=424&c=8&rs=1&qlt=90&o=6&pid=ImgMagVNext&rm=2" alt="Albert Camus en 1957">
+                    <p>Albert Camus en 1957</p>
+                </div>
+
+                <div class="tarjeta-galeria">
+                    <img src="https://th.bing.com/th/id/OIP.82Poi3BDSipdjrt0l75dVgHaFe?w=242&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Retrato de Albert Camus">
+                    <p>Premio Nobel de Literatura</p>
+                </div>
+
+                <div class="tarjeta-galeria">
+                    <img src="data:image/webp;base64,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" alt="Camus posando">
+                    <p>Camus en Estocolmo</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
